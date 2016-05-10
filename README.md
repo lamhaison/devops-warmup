@@ -4,6 +4,6 @@ Imagine that your team is working on an awesome [API service](https://github.com
 
 The goal is to have a separate git repository dedicated for managing the infrastructure and deploying the project.
 
-Project specifications:
+API service specifications:
 - Platform: NodeJS 5.x+
 - Data storage: Redis 3.x+
