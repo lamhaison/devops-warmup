@@ -7,3 +7,5 @@ The goal is to have a separate git repository dedicated for managing the infrast
 API service specifications:
 - Platform: NodeJS 5.x+
 - Data storage: Redis 3.x+
+
+**NOTE:** Please put your work in a git repository (preferably github)
