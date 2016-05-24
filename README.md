@@ -1,11 +1,15 @@
-In this simple exercise, you need to set up a simple deployment workflow using your tool of choice.
+The first, because I have to change redis server to alias (I create a redis container and nodejs app container), so that I fork to new my own repo is https://github.com/lamhaison/sample-api. And change on config.
+The first, since I have to change redis server to alias (I create a redis container and nodejs app container), so that I fork to new my own repo is https://github.com/lamhaison/sample-api. And change redis server ip on config.js
 
-Imagine that your team is working on an awesome [API service](https://github.com/chatwing/sample-api), but they are a bunch of developers and clueless when it comes to server management and stuff. Your task is to set up the infrastructure for the above project using your favorite tools (Ansible, Saltstack, Chef, Puppet etc...). After that, you also need to set up a simple deployment process for the project using your favorite tools.
+The second, I chose docker to package my deploy to image and define docker-compose file to run one redis container and docker nodejs app container (nodejs link to redis container)
 
-The goal is to have a separate git repository dedicated for managing the infrastructure and deploying the project.
+I have write a script to pull source from repo and run nodejs app, when nodejs app container run it will be run script and auto pull code and deploy nodejs app
 
-API service specifications:
-- Platform: NodeJS 5.x+
-- Data storage: Redis 3.x+
+You have to setup docker engine and docker-compose. If your host do not install it, please see this link https://docs.docker.com/engine/installation/mac/ (for docker-engine), https://docs.docker.com/compose/install/ (for docker-compose)
 
-**NOTE:** Please put your work in a git repository (preferably github)
+After install requirement docker, you can delpoy app using follow command:
+cd nodojs_docker
+docker-compose up
+
+Testing: curl http://localhot:3000/api/test
+
