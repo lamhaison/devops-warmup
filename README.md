@@ -1,4 +1,3 @@
-The first, because I have to change redis server to alias (I create a redis container and nodejs app container), so that I fork to new my own repo is https://github.com/lamhaison/sample-api. And change on config.
 The first, since I have to change redis server to alias (I create a redis container and nodejs app container), so that I fork to new my own repo is https://github.com/lamhaison/sample-api. And change redis server ip on config.js
 
 The second, I chose docker to package my deploy to image and define docker-compose file to run one redis container and docker nodejs app container (nodejs link to redis container)
