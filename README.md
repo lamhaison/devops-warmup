@@ -5,11 +5,14 @@ The second, I chose docker to package my deploy to image and define docker-compo
 
 I have write a script to pull source from repo and run nodejs app, when nodejs app container run it will be run script and auto pull code and run nodejs app
 
-You have to setup docker engine and docker-compose. If your host do not install it, please see this link https://docs.docker.com/engine/installation/mac/ (for docker-engine), https://docs.docker.com/compose/install/ (for docker-compose)
+You have to setup docker engine and docker-compose. If your host do not install it, please see this linh
+- https://docs.docker.com/engine/installation/mac/ (for docker-engine)
+- https://docs.docker.com/compose/install/ (for docker-compose)
 
 After install requirement docker, you can delpoy system by using follow command:
-cd nodojs_docker
-docker-compose up
+ - cd nodojs_docker
+ - docker-compose up
+ - docker-compose ps
 
 Testing: curl http://localhot:3000/api/test
 
