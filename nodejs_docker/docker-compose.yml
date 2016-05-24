@@ -1,0 +1,15 @@
+version: '2'
+services:
+  redis:
+    image: redis
+    container_name: redis
+    volumes:
+      - /docker/redis/data:/data
+
+  nodejs_api:
+    build: .
+    depends_on:
+      - redis
+    ports:
+      - "3000:3000"
+    container_name: nodejs_api
